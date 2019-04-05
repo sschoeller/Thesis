@@ -1,0 +1,65 @@
+% ----------------------------------------------------------------------------
+% METADATA
+% Notes by: Scott Schoeller (sschoelleerSTEM)
+% Book: Modern Applications of Automata Theory
+% Editors: D'Souza, D. andShankar, P.
+% Year: 2012
+% ----------------------------------------------------------------------------
+\documentclass[12pt]{article}
+
+\usepackage[document]{ragged2e} % left aligns text
+\usepackage{amssymb}
+\usepackage{standalone} % for includes
+\usepackage{graphicx}
+\usepackage{float} % aligns figures
+
+
+\begin{document}
+
+\pagenumbering{gobble} % toc has no page number
+\tableofcontents
+
+\newpage %
+\pagenumbering{arabic}
+
+\section{Chapter 1}
+\ \\
+\textbf{\S{1.1}}\\
+finite automaton - finite no. of states, like CPU\\
+Only current state can be viewed.\\
+\ \\
+Notation\\
+$A$ finite alphabet\\
+Elements of $A$: letters\\
+Finite seq. of letters is a word.\\
+Empty sequence/word symbolized by $\epsilon$, $\Lambda$, or 1\\
+Set of nonempty words symbolized by $A^{+}$\\
+Concat non-commutative\\
+$|uv| = |u| + |v|$\\
+u$\epsilon$ = $\epsilon$u = u
+\newpage %
+
+\textbf{\S{1.2.1}}\\
+Concat product: $KL = \{uv | u \in K$ and $v \in L\}$\\
+Power notation: $L^{n}$, where $L^{0} = \{ \epsilon \}$\\
+\ \\
+morphism\\
+
+For alphabets $A$ and $B$, a morphism from $A^{*}$ to $B^{*}$ is a mapping.\\ 
+$\phi: A^{*} \to B^{*}$ s.t. :\\
+$\phi(\epsilon) = \epsilon$\\
+$\forall u,v \in A^{*}, \phi(u)\phi(v)$\\
+Rational (Regular) Languages: Rat$A^{*}$ is least class of languages over the alphabet, A, s.t. :\\
+1. the langauges $\emptyset$ and $\{ a \}$ are rational $\forall a \in A$,\\
+2. if $K$ and $L$ are rational languages, then $K \cup L, KL$ and $L^{*}$ are also rational.\\
+\ \\
+Extended rational operations: rational ops + intersection, compliment, morphic image (?)\\
+Class of extended rational languages over $A$ is X-Rat$A^{*}$  
+
+\newpage %
+
+\textbf{\S{1.2.2}}\\
+
+\section{Chapter 9}
+
+\end{document}

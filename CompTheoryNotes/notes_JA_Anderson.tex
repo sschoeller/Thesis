@@ -1,0 +1,130 @@
+% ----------------------------------------------------------------------------
+% METADATA
+% Notes by: Scott Schoeller (sschoelleerSTEM)
+% Book: Automata Theory with Modern Applications
+% Author: Anderson, J.A.
+% Year: ????
+% ----------------------------------------------------------------------------
+\documentclass{article}
+
+\usepackage[document]{ragged2e} % left aligns text
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{float} % aligns figures
+
+\date{} % delete this line to display the current date
+
+\begin{document}
+
+\textbf{\underline{Ch. 1 - Introduction}}\\
+
+$ A \cap B $ : ALL elements contained in both A and B
+
+$ A \cup B $ : ALL elements either A or B
+
+B - A : Set difference set all elements in B NOT in A
+
+$ A \Delta B $ : Symmetric difference; set $ (A-B) \cup (B-A) $ 
+
+$ A^{'} = \mathcal{U} - A $
+\newline
+
+\textbf{Theorem 1.1}\\
+
+$ A \cap (B \cup C) = (A \cap B) \cup (A \cap C) $
+
+$ A \cup (B \cap C) = (A \cup B) \cap (A \cup C) $
+\newline
+
+\textbf{DeMorgan's Laws}\\
+$ {(A \cup B)}^{'} = A^{'} \cap B^{'} $
+
+$ {(A \cap B)}^{'} = A^{'} \cup B^{'} $
+\newline
+
+\textbf{Other Properties}\\
+$ A \cup \emptyset  = A $
+
+$ A \cap \mathcal{U} = A $
+
+$ A \cup A^{'} = \mathcal{U} $
+
+$ A \cap A^{'} = \emptyset $
+\newpage %
+
+\textbf{Cartesian Product}\\
+$ A \ \times \ B = \{(a,b): a \in A \ and \ b \in B \} $
+\newline
+
+\textbf{Power Set}\\
+
+$ A = \{a,b,c\} $\\
+$ P(A) = \{ \{a\}, \{b\}, \{c\}, \{a,b\}, \{a,c\}, \{b,c\}, \{a,b,c\}, \emptyset \} $\\
+$ |P(A)| = 2^{|A|} $
+\newline
+
+\textbf{Relations}\\
+Given sets A and B, any subset $\mathcal{R}$ of $A \times B$ is a relation between A and B.\\
+If $(a,b) \in \mathcal{R}, A\mathcal{R}B $.
+
+If A = B, $\mathcal{R}$ is a relation on A.
+
+Domain of relation, $\mathcal{R}$, between A and B is:\\
+$\{ a : a \in A, \exists \ b \in B \ s.t. \ a\mathcal{R}b \}$.
+
+Range is: $s \circ t = \{b : b \in B, \exists \ a \in A \ s.t. \ a\mathcal{R}b \}$.\\
+
+$\mathcal{R}^{-1} = \{(b,a) : (a,b) \in \mathcal{R} \}$.
+\newline
+
+\textbf{Theorem 1.2}\\
+Let $\mathcal{R}$ be a relation between A and B,\\and let S be a relation between B and C.\\
+The composition of $\mathcal{R}$ and S, denoted $S \circ \mathcal{R}$, is a relation between
+A and C defined by $(a,c) \in S \circ \mathcal{R} \ if \  \exists \ b \in B \ s.t. \ (a,b) \in \mathcal{R}$ and $(b,c) \in S$.
+
+\textbf{Reflexsive, Transitive, Antisymmetric, Transitive - 1.16}\\
+Reflexsive if $a\mathcal{R}a \ \forall \ a \in A$.\\
+Symmetric if $a\mathcal{R}b \to b\mathcal{R}a \ \forall \ a,b \in A $.\\
+Antisymmetric if $a\mathcal{R}b$ and $b\mathcal{R}a$ implies $a=b$.\\
+Transitive if whenever $a\mathcal{R}b$ and $b\mathcal{R}c$, then $a\mathcal{R}c$.
+\newpage %
+
+\textbf{Def. 1.20 - partial orderings, posets}\\
+A relation $\mathcal{R}$ on $A$ is a partial ordering if it is reflexive, antisymmetric and transitive.
+If $\mathcal{R}$ is a partial ordering on $A$, then $(A,\mathcal{R})$ is a partially ordered set (aka poset).
+\newline
+
+\textbf{Def. 1.21 - chain/total ordering}\\
+Let $(A, \le)$ be a partially ordered set.  If $a,b \in A$ and either $a \le b$ or $b \le a$, then $a$ and $b$ are said to be comparable.  If $\forall \ a,b \in A$, $a$ and $b$ are comparable, then $(A, \le)$ is called a 
+\\ chain or total ordering.
+\newline
+
+\textbf{Def. 1.22(a) - upper bound, lub}\\
+$B$ is a subset of a poset $A$, an element $a \in A$ is an upper bound of $B$ if $b \le a$ (or $a \ge b$) $\forall \ b \in G$. $a$ is the least upper bound (lub) of $B$ if:\\
+(i) $a$ is an upper bound of $B$ and\\
+(ii) if any other element $a^{'}$ of $A$ is an upper bound of $B$, then $a \le a^{'}$.\\
+The lub for the entire poset $A$ (if exists) is the greatest element of $A$.
+\newline
+
+\textbf{Def. 1.22(b) - lower bound, glb}\\
+An element $a$ of $A$ is a lower bound of $B$ if $a \le b$ (or $ b\ge a$) $\forall \ b \in B$ if:\\
+(i) $a$ is a lower bound of $B$ and,\\
+(ii) if any other element $a^{'}$ of $A$ is a lower bound of $B$, then $a \ge a^{'}$.\\
+The glb of $A$ (if exists) is known as the least element of $A$.
+\newline
+
+\textbf{Def. of lattice}\\
+A lattice consists of a poset in which every two elements have a unique lub and unique glb.\\
+$<https://en.wikipedia.org/wiki/Lattice_(order)>$
+\newline
+
+\textbf{Def. 1.23 - upper semilattice}\\
+A poset $A$ for which every pair of elements of $A$ have a least upper bound\\
+in $A$ is called an upper semilattice and is denoted $(A, \lor)$ or $(A, +)$.
+\newline
+
+\textbf{Def. 1.24 - lower semilattice}\\
+A poset $A$ for which every pair of elements of $A$ have a greatest lower bound\\ 
+in $A$ is called a lower semilattice and is denoted by $(A, \land)$ or $(A, -)$
+
+\end{document}
