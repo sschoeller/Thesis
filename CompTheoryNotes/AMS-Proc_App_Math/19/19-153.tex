@@ -17,22 +17,29 @@ The length $l(x)$ is the no. of elements in \textit{x}\\
 $\Lambda$ is the empty word.\\
 "$\Sigma^{*}$ is a free semigroup under" concatenation\\
 $\sigma \in \Sigma$ are "free generators" of this semi-group\\
-For events (or subsets) $A \underline{\subset} \Sigma^{*}, B \underline{\subset} \Sigma^{*}$\\
+For events (or subsets) $A \subseteq \Sigma^{*}, B \subseteq \Sigma^{*}$\\
 $A^{*} = A^{0} \cup A ...$\\
 
 \textbf{DEFINITION 1}:
-"A \textit{finite automata (f.a.)} over $\Sigma$ is a system $\mathfrak{U} = < S, M, s_0, F>$ where \textit{S} is a finite set (the set of \textit{states}), $M: S \times \Sigma \to S$ (the \textit{table of transitions} of $\mathfrak{U}$) $s_0 \in S$ ($s_0$ is the \textit{initial state}), $F \underline{\subset} S$ (\textit{F} is the set of \textit{designated} final states)."\\
+"A \textit{finite automata (f.a.)} over $\Sigma$ is a system $\mathfrak{U} = < S, M, s_0, F>$ 
+where \textit{S} is a finite set (the set of \textit{states}), $M: S \times \Sigma \to S$ (the \textit{table of transitions} of $\mathfrak{U}$) 
+$s_0 \in S$ ($s_0$ is the \textit{initial state}), $F \subseteq S$ (\textit{F} is the set of \textit{designated} final states)."\\
 
 \textit{M} "can be uniquely extended to" $M^{*}: S \times \Sigma^{*} \to S$; $M^{*}(s, \Lambda) = s, s \in S$\\
 $M^{*}(s, x\sigma) = M(M^{*}(s,x), \sigma, s \in S, \sigma \in \Sigma, x \in \Sigma^{*}$\\
 
-\textit{M} is the state-transition function with respect to  $\mathfrak{U}$.
-In a similar manner, $M^{*}$ describes state-transitions under input \textit{words} $x \in \Sigma^{*}$
+\textit{M} is the state-transition function with respect to  $\mathfrak{U}$.\\
+In a similar manner, $M^{*}$ describes state-transitions under input \textit{words} $x \in \Sigma^{*}$.\\
 
-\textbf{DEFINITION 2}: "The set $T(\mathfrak{U})...$
+\textbf{DEFINITION 2}: 
+"The set $T(\mathfrak{U}) = \{ x | x \in \Sigma^{*}, M^{*}(s_0, x) \in F \}$ \\
+is the \textit{set} (event) \textit{defined} by $\mathfrak{U}$. A set $A \subseteq \Sigma^{*}$ is called a \textit{regular event} if for some finite automaton $\mathfrak{U}, A = T(\mathfrak{U})$."
 
 \subsubsection{F.a. mappings}
-
+Little distinction between automata in DEFINITION 1 and those that "yield a mapping from input sequences to output sequences".\\
+Associate "state $s \in F$ the output 1 and with each $s \in S - F$ the output 0".\\
+Associate $\mathfrak{U}$ the mapping $T:\Sigma^{*} \to \{ 0, 1 \}^{*}$ s.t. $T(\sigma_{0} \sigma_{1}...\sigma_{n-1})$
+ 
 \subsubsection{Nonderministic automata}
 $\mathfrak{U}$ in state \textit{s} with input $\sigma$...
 
