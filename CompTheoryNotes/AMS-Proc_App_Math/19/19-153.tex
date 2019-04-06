@@ -1,0 +1,38 @@
+% --------------------------------------------------------------
+% METADATA
+% Notes by: Scott Schoeller (sschoellerSTEM)
+% Author: Rabin, M.O.
+% Proceedings Symposia Applied Math
+% Year: 1967
+% --------------------------------------------------------------
+
+\renewcommand{\thesubsection}{\Roman{subsection}}
+
+\section{MATHEMATICAL THEORY OF AUTOMATA}
+
+\subsection{FINITE AUTOMATA}
+word on $\Sigma$
+for a finite sequence $x=\sigma_{0}\sigma_{1}...\sigma_{n-1}, \sigma_{i} \in \Sigma$\\
+The length $l(x)$ is the no. of elements in \textit{x}\\
+$\Lambda$ is the empty word.\\
+"$\Sigma^{*}$ is a free semigroup under" concatenation\\
+$\sigma \in \Sigma$ are "free generators" of this semi-group\\
+For events (or subsets) $A \underline{\subset} \Sigma^{*}, B \underline{\subset} \Sigma^{*}$\\
+$A^{*} = A^{0} \cup A ...$\\
+
+\textbf{DEFINITION 1}:
+"A \textit{finite automata (f.a.)} over $\Sigma$ is a system $\mathfrak{U} = < S, M, s_0, F>$ where \textit{S} is a finite set (the set of \textit{states}), $M: S \times \Sigma \to S$ (the \textit{table of transitions} of $\mathfrak{U}$) $s_0 \in S$ ($s_0$ is the \textit{initial state}), $F \underline{\subset} S$ (\textit{F} is the set of \textit{designated} final states)."\\
+
+\textit{M} "can be uniquely extended to" $M^{*}: S \times \Sigma^{*} \to S$; $M^{*}(s, \Lambda) = s, s \in S$\\
+$M^{*}(s, x\sigma) = M(M^{*}(s,x), \sigma, s \in S, \sigma \in \Sigma, x \in \Sigma^{*}$\\
+
+\textit{M} is the state-transition function with respect to  $\mathfrak{U}$.
+In a similar manner, $M^{*}$ describes state-transitions under input \textit{words} $x \in \Sigma^{*}$
+
+\textbf{DEFINITION 2}: "The set $T(\mathfrak{U})...$
+
+\subsubsection{F.a. mappings}
+
+\subsubsection{Nonderministic automata}
+$\mathfrak{U}$ in state \textit{s} with input $\sigma$...
+
