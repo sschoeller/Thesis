@@ -1,0 +1,789 @@
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:z="http://www.zotero.org/namespaces/export#"
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:vcard="http://nwalsh.com/rdf/vCard#"
+ xmlns:foaf="http://xmlns.com/foaf/0.1/"
+ xmlns:bib="http://purl.org/net/biblio#"
+ xmlns:dcterms="http://purl.org/dc/terms/"
+ xmlns:prism="http://prismstandard.org/namespaces/1.2/basic/"
+ xmlns:link="http://purl.org/rss/1.0/modules/link/">
+    <bib:Book rdf:about="#item_2">
+        <z:itemType>book</z:itemType>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>Upper Saddle River, NJ</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>Addison-Wesley</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Knuth</foaf:surname>
+                        <foaf:givenname>Donald E.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dcterms:isReferencedBy rdf:resource="#item_7"/>
+        <prism:volume>1</prism:volume>
+        <prism:edition>3</prism:edition>
+        <dc:date>1997</dc:date>
+        <dc:title>The art of computer programming: fundamental algorithms</dc:title>
+    </bib:Book>
+    <bib:Memo rdf:about="#item_7">
+        <rdf:value>&lt;p&gt;Read portions of Ch. 1 - Induction, Powers/Logorithms, Number Theory&lt;/p&gt;</rdf:value>
+    </bib:Memo>
+    <bib:Book rdf:about="#item_4">
+        <z:itemType>book</z:itemType>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>New York</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>Addison-Wesley</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Knuth</foaf:surname>
+                        <foaf:givenname>Donald E.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dcterms:isReferencedBy rdf:resource="#item_8"/>
+        <prism:volume>4, fasc. 0</prism:volume>
+        <dc:date>2008</dc:date>
+        <dc:title>The art of computer programming: introduction to combinatorial algorithms and boolean functions</dc:title>
+    </bib:Book>
+    <bib:Memo rdf:about="#item_8">
+        <rdf:value>&lt;p&gt;Read - Reviewed information on Mathematical Logic&lt;/p&gt;</rdf:value>
+    </bib:Memo>
+    <bib:Book rdf:about="#item_5">
+        <z:itemType>book</z:itemType>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>London</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>Springer-Verlag</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Skiena</foaf:surname>
+                        <foaf:givenname>Steven S.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:relation rdf:resource="http://epubs.siam.org/doi/10.1137/0206024"/>
+        <dc:relation rdf:resource="#item_17"/>
+        <prism:edition>2</prism:edition>
+        <dc:date>2010</dc:date>
+        <dc:title>The Algorithm Design Manual</dc:title>
+    </bib:Book>
+    <bib:Book rdf:about="#item_6">
+        <z:itemType>book</z:itemType>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>Cambridge, MA</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>The MIT Press</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Cormen</foaf:surname>
+                        <foaf:givenname>Thomas H.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Leiserson</foaf:surname>
+                        <foaf:givenname>Charles E.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Rivest</foaf:surname>
+                        <foaf:givenname>Ronald L.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Stein</foaf:surname>
+                        <foaf:givenname>Clifford</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dcterms:isReferencedBy rdf:resource="#item_33"/>
+        <dc:relation rdf:resource="http://epubs.siam.org/doi/10.1137/0206024"/>
+        <dc:relation rdf:resource="#item_17"/>
+        <prism:edition>3</prism:edition>
+        <dc:date>2009</dc:date>
+        <dc:title>Introduction to Algorithms</dc:title>
+    </bib:Book>
+    <bib:Memo rdf:about="#item_33">
+       <rdf:value>&lt;p&gt;Ch. 27 &amp;amp; 32&lt;/p&gt;</rdf:value>
+    </bib:Memo>
+    <bib:Article rdf:about="http://epubs.siam.org/doi/10.1137/0206024">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf rdf:resource="urn:issn:0097-5397,%201095-7111"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Knuth</foaf:surname>
+                        <foaf:givenname>Donald E.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Morris, Jr.</foaf:surname>
+                        <foaf:givenname>James H.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Pratt</foaf:surname>
+                        <foaf:givenname>Vaughan R.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dcterms:isReferencedBy rdf:resource="#item_17"/>
+        <dc:relation rdf:resource="#item_5"/>
+        <dc:relation rdf:resource="urn:isbn:978-0-13-262478-7"/>
+        <dc:relation rdf:resource="#item_6"/>
+        <dc:subject>TheoryComp</dc:subject>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>http://epubs.siam.org/doi/10.1137/0206024</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <bib:pages>323-350</bib:pages>
+        <dc:date>06/1977</dc:date>
+        <dcterms:dateSubmitted>2019-04-10 02:57:04</dcterms:dateSubmitted>
+        <z:libraryCatalog>DOI.org (Crossref)</z:libraryCatalog>
+        <z:language>en</z:language>
+        <dc:title>Fast Pattern Matching in Strings</dc:title>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:0097-5397,%201095-7111">
+        <prism:volume>6</prism:volume>
+        <prism:number>2</prism:number>
+        <dc:title>SIAM Journal on Computing</dc:title>
+        <dc:identifier>ISSN 0097-5397, 1095-7111</dc:identifier>
+        <dc:identifier>DOI 10.1137/0206024</dc:identifier>
+    </bib:Journal>
+    <bib:Memo rdf:about="#item_17">
+        <rdf:value>&lt;p&gt;High priority!&lt;/p&gt;</rdf:value>
+        <dc:relation rdf:resource="#item_5"/>
+        <dc:relation rdf:resource="urn:isbn:978-0-13-262478-7"/>
+        <dc:relation rdf:resource="#item_6"/>
+    </bib:Memo>
+    <bib:Book rdf:about="urn:isbn:978-0-13-262478-7">
+        <z:itemType>book</z:itemType>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>Upper Saddle River, NJ</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>Prentice-Hall</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Lewis</foaf:surname>
+                        <foaf:givenname>Harry R.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Papadimitriou</foaf:surname>
+                        <foaf:givenname>Christos H.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:relation rdf:resource="http://epubs.siam.org/doi/10.1137/0206024"/>
+        <dc:relation rdf:resource="#item_17"/>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Computational complexity</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Formal languages</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Logic, Symbolic and mathematical</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Machine theory</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <prism:edition>2</prism:edition>
+        <dc:identifier>ISBN 978-0-13-262478-7</dc:identifier>
+        <dc:date>1998</dc:date>
+        <dc:subject>
+           <dcterms:LCC><rdf:value>QA267 .L49 1998</rdf:value></dcterms:LCC>
+        </dc:subject>
+        <z:libraryCatalog>Library of Congress ISBN</z:libraryCatalog>
+        <dc:title>Elements of the theory of computation</dc:title>
+        <z:numPages>361</z:numPages>
+    </bib:Book>
+    <bib:Book rdf:about="urn:isbn:978-0-521-84899-2">
+        <z:itemType>book</z:itemType>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>Cambridge ; New York</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>Cambridge University Press</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Crochemore</foaf:surname>
+                        <foaf:givenname>Maxime</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Hancart</foaf:surname>
+                        <foaf:givenname>Christophe</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Lecroq</foaf:surname>
+                        <foaf:givenname>Thierry</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Computational biology</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Computer algorithms</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Matching theory</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:identifier>ISBN 978-0-521-84899-2</dc:identifier>
+        <dc:date>2007</dc:date>
+        <dc:subject>
+           <dcterms:LCC><rdf:value>QA76.9.A43 C757 2007</rdf:value></dcterms:LCC>
+        </dc:subject>
+        <dc:description>OCLC: ocm76820955</dc:description>
+        <z:libraryCatalog>Library of Congress ISBN</z:libraryCatalog>
+        <dc:title>Algorithms on strings</dc:title>
+        <z:numPages>383</z:numPages>
+    </bib:Book>
+    <bib:Article rdf:about="http://arxiv.org/abs/1612.09375">
+        <z:itemType>journalArticle</z:itemType>
+        <dcterms:isPartOf>
+           <bib:Journal><dc:title>arXiv:1612.09375 [math]</dc:title></bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Leinster</foaf:surname>
+                        <foaf:givenname>Tom</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dcterms:isReferencedBy rdf:resource="#item_21"/>
+        <link:link rdf:resource="#item_22"/>
+        <link:link rdf:resource="#item_23"/>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Mathematics - Algebraic Topology</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Mathematics - Category Theory</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Mathematics - Logic</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>http://arxiv.org/abs/1612.09375</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:date>2016-12-29</dc:date>
+        <dc:description>arXiv: 1612.09375</dc:description>
+        <dcterms:dateSubmitted>2019-04-10 03:09:03</dcterms:dateSubmitted>
+        <z:libraryCatalog>arXiv.org</z:libraryCatalog>
+        <dcterms:abstract>This short introduction to category theory is for readers with relatively little mathematical background. At its heart is the concept of a universal property, important throughout mathematics. After a chapter introducing the basic definitions, separate chapters present three ways of expressing universal properties: via adjoint functors, representable functors, and limits. A final chapter ties the three together. For each new categorical concept, a generous supply of examples is provided, taken from different parts of mathematics. At points where the leap in abstraction is particularly great (such as the Yoneda lemma), the reader will find careful and extensive explanations.</dcterms:abstract>
+        <dc:title>Basic Category Theory</dc:title>
+    </bib:Article>
+    <bib:Memo rdf:about="#item_21">
+        <rdf:value>&lt;p&gt;Comment: Textbook, vii+183 pages, 107 exercises&lt;/p&gt;</rdf:value>
+    </bib:Memo>
+    <z:Attachment rdf:about="#item_22">
+        <z:itemType>attachment</z:itemType>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>http://www.arxiv.org/pdf/1612.09375.pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2019-04-10 03:09:05</dcterms:dateSubmitted>
+        <dc:title>arXiv:1612.09375 PDF</dc:title>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_23">
+        <z:itemType>attachment</z:itemType>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://arxiv.org/abs/1612.09375</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2019-04-10 03:09:07</dcterms:dateSubmitted>
+        <dc:title>arXiv.org Snapshot</dc:title>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Book rdf:about="#item_35">
+        <z:itemType>book</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Series>
+               <dc:title>Progress in Theoretical Computer Science</dc:title>
+            </bib:Series>
+        </dcterms:isPartOf>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>Boston</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>Birkhäuser</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Straubing</foaf:surname>
+                        <foaf:givenname>Howard</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:relation rdf:resource="#item_45"/>
+        <dc:date>1994</dc:date>
+        <dc:title>Finite Automata, Formal Logic, and Circuit Complexity</dc:title>
+    </bib:Book>
+    <bib:Book rdf:about="urn:isbn:978-981-4271-04-2">
+        <z:itemType>book</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Series>
+                <dc:title>IISc research monographs series</dc:title>
+                <dc:identifier>vol. 2</dc:identifier>
+            </bib:Series>
+        </dcterms:isPartOf>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>New Jersey</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>IISc Press/World Scientific</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:editors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>D'Souza</foaf:surname>
+                        <foaf:givenname>Deepak</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Shankar</foaf:surname>
+                        <foaf:givenname>P.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:editors>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Computational complexity</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+           <z:AutomaticTag><rdf:value>Machine theory</rdf:value></z:AutomaticTag>
+        </dc:subject>
+        <dc:identifier>ISBN 978-981-4271-04-2</dc:identifier>
+        <dc:date>2012</dc:date>
+        <dc:subject>
+           <dcterms:LCC><rdf:value>QA267 .M63 2012</rdf:value></dcterms:LCC>
+        </dc:subject>
+        <z:libraryCatalog>Library of Congress ISBN</z:libraryCatalog>
+        <dc:title>Modern applications of automata theory</dc:title>
+        <z:numPages>656</z:numPages>
+    </bib:Book>
+    <bib:Book rdf:about="urn:isbn:978-0-201-85392-6%20978-0-321-53496-5%20978-0-201-85393-3%20978-0-201-85394-0%20978-0-321-33570-8%20978-0-201-03804-0">
+        <z:itemType>book</z:itemType>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>Boston</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>Addison-Wesley</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Knuth</foaf:surname>
+                        <foaf:givenname>Donald E.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dcterms:isReferencedBy rdf:resource="#item_39"/>
+        <dcterms:isReferencedBy rdf:resource="#item_40"/>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Computer algorithms</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Computer programming</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <prism:volume>1, fasc. 1.</prism:volume>
+        <dc:identifier>ISBN 978-0-201-85392-6 978-0-321-53496-5 978-0-201-85393-3 978-0-201-85394-0 978-0-321-33570-8 978-0-201-03804-0</dc:identifier>
+        <dc:date>2005</dc:date>
+        <dc:subject>
+           <dcterms:LCC><rdf:value>QA76.6 .K64 2005</rdf:value></dcterms:LCC>
+        </dc:subject>
+        <z:libraryCatalog>Library of Congress ISBN</z:libraryCatalog>
+        <dc:title>The art of computer programming: MMIX, a RISC computer for the new millennium</dc:title>
+    </bib:Book>
+    <bib:Memo rdf:about="#item_39">
+        <rdf:value>&lt;p&gt;Issued in fascicles. Consists of updates being published as the author continues working towards the complete 4th ed. of The art of computer programming, i.e. fascicles are supplements to the 3rd ed. in anticipation of the 4th ed. which will condense the most important material into a single book Includes index&lt;/p&gt;</rdf:value>
+    </bib:Memo>
+    <bib:Memo rdf:about="#item_40">
+        <rdf:value>&lt;p&gt;v. 1, fasc. 1. MMIX, a RISC computer for the new millennium -- v. 4, fasc. 0. Introduction to combinatorial algorithms and boolean functions v. 4, fasc. 1. Bitwise tricks &amp;amp; techniques, binary decision diagrams -- v. 4, fasc. 2. Generating all tuples and permutations -- v. 4, fasc. 3. Generating all combinations and partitions -- v. 4, fasc. 4. Generating all trees, history of combinatorial generation -- v. 4A, pt. 1. Combinatorial algorithms&lt;/p&gt;</rdf:value>
+    </bib:Memo>
+    <rdf:Description rdf:about="#item_42">
+        <z:itemType>conferencePaper</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>XIX</prism:volume>
+                <dc:title>Proceedings of Symposia in Applied Mathematics</dc:title>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>Providence, RI</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>Ameican Mathematical Society</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Rabin</foaf:surname>
+                        <foaf:givenname>Michael O.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <bib:editors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Schwartz</foaf:surname>
+                        <foaf:givenname>J.T.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:editors>
+        <dcterms:isReferencedBy rdf:resource="#item_43"/>
+        <dc:relation rdf:resource="#item_45"/>
+        <dc:subject>TheoryComp</dc:subject>
+        <bib:pages>153-175</bib:pages>
+        <dc:date>1967</dc:date>
+        <dc:title>Mathematical theory of automata</dc:title>
+    </rdf:Description>
+    <bib:Memo rdf:about="#item_43">
+       <rdf:value>&lt;p&gt;Reading IP&lt;/p&gt;</rdf:value>
+    </bib:Memo>
+    <bib:BookSection rdf:about="#item_45">
+        <z:itemType>bookSection</z:itemType>
+        <dcterms:isPartOf>
+           <bib:Book><dc:title>Automata Studies</dc:title></bib:Book>
+        </dcterms:isPartOf>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>Princeton, NJ</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>Princeton University Press</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Kleene</foaf:surname>
+                        <foaf:givenname>S.C.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <bib:editors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Shannon</foaf:surname>
+                        <foaf:givenname>C.E.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>McCarthy</foaf:surname>
+                        <foaf:givenname>J.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:editors>
+        <dcterms:isReferencedBy rdf:resource="#item_50"/>
+        <dc:relation rdf:resource="#item_47"/>
+        <dc:relation rdf:resource="#item_42"/>
+        <dc:relation rdf:resource="#item_35"/>
+        <dc:subject>TheoryComp</dc:subject>
+        <bib:pages>3-41</bib:pages>
+        <dc:date>1956</dc:date>
+        <dc:title>Representation of events in nerve nets and finite automata</dc:title>
+    </bib:BookSection>
+    <bib:Memo rdf:about="#item_50">
+       <rdf:value>&lt;p&gt;Finish 2nd!&lt;/p&gt;</rdf:value>
+    </bib:Memo>
+    <rdf:Description rdf:about="#item_46">
+        <z:itemType>conferencePaper</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:volume>XIX</prism:volume>
+                <dc:title>Proceedings of Symposia in Applied Mathematics</dc:title>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>Providence, RI</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>Ameican Mathematical Society</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Robinson</foaf:surname>
+                        <foaf:givenname>J.A.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <bib:editors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Schwartz</foaf:surname>
+                        <foaf:givenname>J.T.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:editors>
+        <bib:pages>1-18</bib:pages>
+        <dc:date>1967</dc:date>
+        <dc:title>A review of automatic theorem-proving</dc:title>
+    </rdf:Description>
+    <bib:BookSection rdf:about="#item_47">
+        <z:itemType>bookSection</z:itemType>
+        <dcterms:isPartOf>
+           <bib:Book><dc:title>Automata Studies</dc:title></bib:Book>
+        </dcterms:isPartOf>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>Princeton, NJ</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>Princeton University Press</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Minsky</foaf:surname>
+                        <foaf:givenname>M.L.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <bib:editors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Shannon</foaf:surname>
+                        <foaf:givenname>C.E.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>McCarthy</foaf:surname>
+                        <foaf:givenname>J.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:editors>
+        <dcterms:isReferencedBy rdf:resource="#item_49"/>
+        <dc:relation rdf:resource="#item_45"/>
+        <dc:subject>TheoryComp</dc:subject>
+        <bib:pages>117-128</bib:pages>
+        <dc:date>1956</dc:date>
+        <dc:title>Some universal elements for finite automata</dc:title>
+    </bib:BookSection>
+    <bib:Memo rdf:about="#item_49">
+       <rdf:value>&lt;p&gt;Finish 1st!&lt;/p&gt;</rdf:value>
+    </bib:Memo>
+    <bib:BookSection rdf:about="#item_48">
+        <z:itemType>bookSection</z:itemType>
+        <dcterms:isPartOf>
+           <bib:Book><dc:title>Automata Studies</dc:title></bib:Book>
+        </dcterms:isPartOf>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>Princeton, NJ</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>Princeton University Press</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Moore</foaf:surname>
+                        <foaf:givenname>Edward F.</foaf:givenname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dcterms:isReferencedBy rdf:resource="#item_51"/>
+        <dc:subject>TheoryComp</dc:subject>
+        <bib:pages>129-153</bib:pages>
+        <dc:date>1956</dc:date>
+        <dc:title>Gedanken-experiments on sequential machines</dc:title>
+    </bib:BookSection>
+    <bib:Memo rdf:about="#item_51">
+       <rdf:value>&lt;p&gt;Finish 3rd!&lt;/p&gt;</rdf:value>
+    </bib:Memo>
+   <z:Collection rdf:about="#collection_9"><dc:title>DS</dc:title></z:Collection>
+    <z:Collection rdf:about="#collection_3">
+        <dc:title>General Algorithms</dc:title>
+        <dcterms:hasPart rdf:resource="#item_5"/>
+        <dcterms:hasPart rdf:resource="#item_6"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_2">
+        <dc:title>General Math &amp; Logic</dc:title>
+        <dcterms:hasPart rdf:resource="#item_2"/>
+        <dcterms:hasPart rdf:resource="#item_4"/>
+        <dcterms:hasPart rdf:resource="http://arxiv.org/abs/1612.09375"/>
+        <dcterms:hasPart rdf:resource="urn:isbn:978-0-201-85392-6%20978-0-321-53496-5%20978-0-201-85393-3%20978-0-201-85394-0%20978-0-321-33570-8%20978-0-201-03804-0"/>
+        <dcterms:hasPart rdf:resource="#item_46"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_7">
+        <dc:title>Peer-reviewed &amp; Proceedings</dc:title>
+        <dcterms:hasPart rdf:resource="http://epubs.siam.org/doi/10.1137/0206024"/>
+        <dcterms:hasPart rdf:resource="#item_42"/>
+        <dcterms:hasPart rdf:resource="#item_45"/>
+        <dcterms:hasPart rdf:resource="#item_47"/>
+        <dcterms:hasPart rdf:resource="#item_48"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_5">
+        <dc:title>String Algorithms</dc:title>
+        <dcterms:hasPart rdf:resource="http://epubs.siam.org/doi/10.1137/0206024"/>
+        <dcterms:hasPart rdf:resource="urn:isbn:978-0-521-84899-2"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_4">
+        <dc:title>Theory of Computation</dc:title>
+        <dcterms:hasPart rdf:resource="http://epubs.siam.org/doi/10.1137/0206024"/>
+        <dcterms:hasPart rdf:resource="urn:isbn:978-0-13-262478-7"/>
+        <dcterms:hasPart rdf:resource="#item_35"/>
+        <dcterms:hasPart rdf:resource="urn:isbn:978-981-4271-04-2"/>
+        <dcterms:hasPart rdf:resource="#item_42"/>
+        <dcterms:hasPart rdf:resource="#item_45"/>
+        <dcterms:hasPart rdf:resource="#item_47"/>
+        <dcterms:hasPart rdf:resource="#item_48"/>
+    </z:Collection>
+</rdf:RDF>
