@@ -38,8 +38,18 @@ is the \textit{set} (event) \textit{defined} by $\mathfrak{U}$. A set $A \subset
 \subsubsection{F.a. mappings}
 Little distinction between automata in DEFINITION 1 and those that "yield a mapping from input sequences to output sequences".\\
 Associate "state $s \in F$ the output 1 and with each $s \in S - F$ the output 0".\\
-Associate $\mathfrak{U}$ the mapping $T:\Sigma^{*} \to \{ 0, 1 \}^{*}$ s.t. $T(\sigma_{0} \sigma_{1}...\sigma_{n-1})$
- 
+Associate $\mathfrak{U}$ the mapping $T:\Sigma^{*} \to \{ 0, 1 \}^{*}$ s.t. $T(\sigma_{0} \sigma_{1}...\sigma_{n-1})$,\\
+Where for $ i \in [0, n-1], \tau_i = 1$ "if $M^{*}(s_0, \sigma_0 ... \sigma_i) \in F$ and and $r_i = 0$ otherwise."\\
+ \newpage
+Generalizations possible:\\
+1. Partitioning \textit{S} into disjoint "union of \textit{k} sets", where $S= F_0 \cup ... \cup F_{k-1}$; mapping $T:\Sigma^{*} \to { \{ 0, 1, ..., k-1 \} }^{*}$
+into words from a \textit{k}-letter alphabet.\\
+2. Output of $F_i, i \in,[0, k-1]$ as a word, $w_i$ on alphabet $\Omega$.  Mapping is $T:\Sigma^{*} \to \Omega^{*}$ ("not even length preserving")\\
+3. Output as function $f(s, \sigma)$ with respect to the current state and current input of $\mathfrak{U}$
+
 \subsubsection{Nonderministic automata}
-$\mathfrak{U}$ in state \textit{s} with input $\sigma$...
+$\mathfrak{U}$ in state \textit{s} with input $\sigma$; can go into any one of a number of states $s' \in S'$, where $S \subset S$ is a set depending on $s$ and $\sigma$.\\
+As a result of DEFINITION 1: $M: S \times \Sigma \to P(S)$; "$P(S)$ is the power set of $S$ and $s_0$ is replaced by a set $S_0 \subseteq S$ of initial states."\\
+If $x=\sigma_0 \sigma_1 ... \sigma_{n-1}$, the sequence of states ($s_0, s_1, ..., s_n$) is \textbf{compatible} w/ x "if $s_0 \in S_0$" and for $i \in [0, n-1]$.\\
+$\mathfrak{U}$ accepts $x$ if for some sequence of states through $s_n$ is compatible w/ $x$, $s_n \in F$.
 
