@@ -51,5 +51,33 @@ into words from a \textit{k}-letter alphabet.\\
 $\mathfrak{U}$ in state \textit{s} with input $\sigma$; can go into any one of a number of states $s' \in S'$, where $S \subset S$ is a set depending on $s$ and $\sigma$.\\
 As a result of DEFINITION 1: $M: S \times \Sigma \to P(S)$; "$P(S)$ is the power set of $S$ and $s_0$ is replaced by a set $S_0 \subseteq S$ of initial states."\\
 If $x=\sigma_0 \sigma_1 ... \sigma_{n-1}$, the sequence of states ($s_0, s_1, ..., s_n$) is \textbf{compatible} w/ x "if $s_0 \in S_0$" and for $i \in [0, n-1]$.\\
-$\mathfrak{U}$ accepts $x$ if for some sequence of states through $s_n$ is compatible w/ $x$, $s_n \in F$.
+$\mathfrak{U}$ accepts $x$ if for some sequence of states through $s_n$ is compatible w/ $x$, $s_n \in F$.\\
+The set $T(\mathfrak{U})$ consists of all words accepted by $\mathfrak{U}$.\\
+\\
+THEOREM 1: "For every nonderministic automata $\mathfrak{U}$ there exists a f.a. $\mathfrak{B}$" s.t. "$T(\mathfrak{U}) = T(\mathfrak{B})$. 
+If $\mathfrak{U}$ has n states, then $\mathfrak{B}$" has less than "$2^n$ states."\\ % correction to wording made here
+
+
+\subsubsection{Regular expressions and events}
+Let $Y_1, Y_2, ...$ be vars "ranging over subsets of $\Sigma^{*}$  The set of regular terms in $Y_1, Y_2, ...$ , $\mathbf{R}$ "is the smallest set satisfying the conditions":\\
+1. $Y_n \in \mathbf{R}$, where $n \in [1, \infty)$\\
+2. if $R_1 \in R, R_2 \in R$ then $R_1 \cup R_2 \in R, (R_1 R_2) \in R, R_{1}^{*} \in R$\\
+Every element of $\textbf{R}$ is called a regular expression $R(\sigma_1, ..., \sigma_n)$, which is a singleton set.\\
+A regular expression a way of expressing subsets of $\Sigma^*$\\
+THEOREM 2. 
+"A set $T \subseteq \Sigma^*$ is f.a. definable (regular)" iff $\exists R(\sigma_1, ..., \sigma_n)$ where $\sigma_i \in \Sigma, i \in [1,k]$ s.t. $T = R(\sigma_1, ..., \sigma_k)$\\
+Every regular event is representable by a regular expression.\\  
+Two regular terms $R(Y_1, ..., Y_n)$ and $Q(Y_1, ..., Y_n)$ are called equivalent if $\forall A_1 \subseteq \Sigma^*, ...,  \forall A_n \subseteq \Sigma^*$,\\
+$R(A_1, ..., A_n) = Q(A_1, ..., A_n)$\\
+\\
+The "equivlance of regular terms is effectively solvable."\\
+If fixed letters of $\Sigma$ are part of "term formulation", $Y_n \in \mathbf{R^{'}}, \sigma \in \mathbf{R^{'}}, n = 1,2, ... \sigma \in \Sigma$.
+
+
+
+
+
+ 
+
+
 
