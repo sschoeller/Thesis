@@ -55,13 +55,13 @@ $\mathfrak{U}$ accepts $x$ if for some sequence of states through $s_n$ is compa
 The set $T(\mathfrak{U})$ consists of all words accepted by $\mathfrak{U}$.\\
 \\
 THEOREM 1: "For every nonderministic automata $\mathfrak{U}$ there exists a f.a. $\mathfrak{B}$" s.t. "$T(\mathfrak{U}) = T(\mathfrak{B})$. 
-If $\mathfrak{U}$ has n states, then $\mathfrak{B}$" has less than "$2^n$ states."\\ % correction to wording made here
+If $\mathfrak{U}$ has n states, then $\mathfrak{B}$" has less than "$2^n$ states." % correction to wording made here
 
 
 \subsubsection{Regular expressions and events}
 Let $Y_1, Y_2, ...$ be vars "ranging over subsets of $\Sigma^{*}$  The set of regular terms in $Y_1, Y_2, ...$ , $\mathbf{R}$ "is the smallest set satisfying the conditions":\\
 1. $Y_n \in \mathbf{R}$, where $n \in [1, \infty)$\\
-2. if $R_1 \in R, R_2 \in R$ then $R_1 \cup R_2 \in R, (R_1 R_2) \in R, R_{1}^{*} \in R$\\
+2. if $R_1 \in \mathbf{R}, R_2 \in \mathbf{R}$ then $R_1 \cup R_2 \in \mathbf{R}, (R_1 R_2) \in \mathbf{R}, R_{1}^{*} \in \mathbf{R}$\\
 Every element of $\textbf{R}$ is called a regular expression $R(\sigma_1, ..., \sigma_n)$, which is a singleton set.\\
 A regular expression a way of expressing subsets of $\Sigma^*$\\
 THEOREM 2. 
@@ -71,13 +71,10 @@ Two regular terms $R(Y_1, ..., Y_n)$ and $Q(Y_1, ..., Y_n)$ are called equivalen
 $R(A_1, ..., A_n) = Q(A_1, ..., A_n)$\\
 \\
 The "equivlance of regular terms is effectively solvable."\\
-If fixed letters of $\Sigma$ are part of "term formulation", $Y_n \in \mathbf{R^{'}}, \sigma \in \mathbf{R^{'}}, n = 1,2, ... \sigma \in \Sigma$.
+If fixed letters of $\Sigma$ are part of "term formulation", $Y_n \in \mathbf{R^{'}}, \sigma \in \mathbf{R^{'}}, n = 1,2, ... \sigma \in \Sigma$.\\
+Regular expressions yield f.a. definable sets.
 
-
-
-
-
- 
-
-
-
+\subsubsection{Algebraization of f.a.}
+$E$ is an equiv. relation on $\Sigma^{*}$ is a right-invariant if $xEy$ implies $xzEyz \forall x, y, z \in \Sigma^{*}$\\
+left-invariant(?)\\
+congruence on $\Sigma^{*}$: given a set T that is a a subset of $\Sigma^{*}$, one can define two relations...\\
