@@ -78,3 +78,23 @@ Regular expressions yield f.a. definable sets.
 $E$ is an equiv. relation on $\Sigma^{*}$ is a right-invariant if $xEy$ implies $xzEyz \forall x, y, z \in \Sigma^{*}$\\
 left-invariant(?)\\
 congruence on $\Sigma^{*}$: given a set T that is a a subset of $\Sigma^{*}$, one can define two relations...\\
+\\
+THEOREM 3.\\
+$T \subseteq \Sigma^{*}$ is regular iff it's "the union of equiv. classes of a right-invariant relation $E$ (on $\Sigma^{*}$) with finite index."  $T$ is regular iff "$E_{T}$ has a finite index."\\
+$\exists \mathfrak{U}$ "with index($E_{T}$) states" s.t. $T = T(\mathfrak{U})$. "No automaton with fewer than index($E_{T}$) states defines $T$."\\
+\\
+THEOREM 3 "is very useful in show that certain sets $T \subseteq \Sigma^{*}$ are or are not regular."\\
+\\
+THEOREM 4."A set $T \subseteq \Sigma^{*}$ is regular" iff "it is a union of equivalence classes of a congruence $\equiv$ (on $\Sigma^{*}$ with finite index."  "...$T$ is regular" iff "index($\equiv_{T}$) is finite."\\
+"Given a congruence relation" on $\Sigma^{*}$, the partitioned set $\Sigma^{*} / \equiv$ of equivalence classes of $\Sigma^{*}$ with respect to $\equiv$, into semi-group so that mapping $\phi_0 : x \to [x]_{\equiv}$  of ea. $x \in \Sigma^{*}$ into equiv. class is a homomorphism of $\Sigma^{*}$ onto $\Sigma^{*} / \equiv$.\\
+Conversely, to ea. homomorphism $\phi_1 : \Sigma^{*} \to M$ of $\Sigma^{*}$ onto semi-group, $M$ - corresponding congruence $\equiv$ def by $x \equiv y$ iff $\phi_1 (x) = \phi_1 (y)$.\\
+\\
+THEOREM 4 (restated).\\
+"A set $T \subseteq \Sigma^{*}$ is regular" iff $\exists M, H \subseteq M$ and a homomorphism $\phi : \Sigma^{*} \to M$ s.t. $T = \phi^{-1} (H)$, where M is a finite semigroup.\\
+\\
+Associate with ea. $\sigma \in \Sigma$ a function $f_{\sigma}$.  The system $<A, a_0, f_{\sigma}>_{\sigma \in \Sigma}$ is an \textit{algebra of type} $\Sigma$ if $a_0 \in A$
+
+\subsection{PROBALISTIC AUTOMATA}
+Not relevant to problem.
+
+\subsection{TREE-AUTOMATA}
