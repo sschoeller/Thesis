@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  23 JUL 2019 16:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  26 JUL 2019 15:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -269,12 +269,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 78--96
 
  []
 
-) [5] (./AMS-Proc_App_Math_Vol19.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 101--104
+
+ []
+
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 105--106
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 113--115
+
+ []
+
+) [6] (./AMS-Proc_App_Math_Vol19.aux) ) 
 Here is how much of TeX's memory you used:
- 1676 strings out of 492649
- 21005 string characters out of 6129622
+ 1677 strings out of 492649
+ 21013 string characters out of 6129622
  90415 words of memory out of 5000000
- 5563 multiletter control sequences out of 15000+600000
+ 5564 multiletter control sequences out of 15000+600000
  11479 words of font info for 43 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  27i,4n,27p,403b,113s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -289,10 +304,10 @@ blic/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmti12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/
 amsfonts/euler/eufm10.pfb>
-Output written on AMS-Proc_App_Math_Vol19.pdf (5 pages, 120628 bytes).
+Output written on AMS-Proc_App_Math_Vol19.pdf (6 pages, 123947 bytes).
 PDF statistics:
- 60 PDF objects out of 1000 (max. 8388607)
- 42 compressed objects within 1 object stream
+ 63 PDF objects out of 1000 (max. 8388607)
+ 44 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
