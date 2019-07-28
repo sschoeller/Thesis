@@ -1,0 +1,43 @@
+% ------------------------------------------------------------------------------------------------------------
+% METADATA
+% Notes by: Scott Schoeller (sschoellerSTEM)
+% "AN n log n ALGORITHM FOR MINIMIZING STATES IN A FINITE AUTOMATON"
+% Author: John Hopcroft
+% Book: Theory of Machines and Computation (Proceedings)
+% Year: 1971
+% ------------------------------------------------------------------------------------------------------------
+\documentclass[12pt]{article}
+\usepackage{geometry} % see geometry.pdf on how to lay out the page. There's lots.
+%\geometry{a4paper} % or letter or a5paper or ... etc
+% \geometry{landscape} % rotated page geometry
+\usepackage{amssymb}
+% See the ``Article customise'' template for come common customisations
+
+\title{Notes on:\\"AN n log n ALGORITHM FOR MINIMIZING STATES IN A FINITE AUTOMATON"}
+\author{}
+\date{} % delete this line to display the current date
+
+%%% BEGIN DOCUMENT
+\begin{document}
+
+\maketitle
+
+$A = (S, I, \delta, F)$ is a finite automata.  S and I are finite, $\delta$ is a mapping from $S X I$ into $S$ and $F \subseteq S$.\\
+\underline{Algorithm}\\
+1. For ea. $s \in S$ and ea. $a \in I$ construct $\delta^{-1}(s,a) = \{ t | \delta(t,a) = s \}$\\
+2. Construct $B(1) = F$, $B(2) = S - F$ and for ea. $a  \in I$ and $1 \le i \le 2$ construct\\
+\\ $\hat{B}(B(i), a) = \{ s | s \in B(i)$ and $\delta^{-1}(s,a) \ne \emptyset$   \}\\
+3. Set $k = 3$\\
+4. For ea. $a \in I$ construct\\
+\\  $L(a) = {1}$ if  $| \hat{B}(B(1), a) | \le | \hat{B}(B(2), a) |$\\
+ $L(a) = {2}$ otherwise.\\
+5. Select $a \in I$ and $i \in L(a)$.  The algorithm terminates when $L(a) = \emptyset$.\\
+6. Delete $i$ from $L(a)$.\\
+7. For each $j < k$ s.t. there exists $t \in B(j)$ with $\delta(t,a) \in \hat{B}(B(i),a)$, perform steps 7a, 7b, 7c and 7d.\\
+\\
+7a. Partition B(j) into $B^{'} = \{t | \delta(t,a) \in \hat{B}(B(i), a)$ and $B^{"} = B^{"} = B(j) - B^{'}(j) \}$\\ 
+7b. Replace $B(j) by B^{'}(j)$. Construct the corresponding $\bar{B}(B(j), a)$. and $\hat{B}(B(k), a)$ for ea. $a \in I$.\\ 
+7c.For ea. $a \in I$\\
+\\
+$L(a) = L(a) \cup {j}$ if $j$ not in $L(a)$ and $0 < ...$ 
+\end{document}
