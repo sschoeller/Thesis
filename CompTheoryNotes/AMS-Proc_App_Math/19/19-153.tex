@@ -112,5 +112,45 @@ Not relevant to problem.
 \subsection{TREE-AUTOMATA}
 Tree automata have a tree for input.\\
 A version of tree automata can be applied to context-free languages [Mezei and Wright, "Generalized Algol-like Languages"].\\
+$\mathfrak{U} = <S, M, S_0, F >$ f.a over $\Sigma$; $x = \sigma_{0}\sigma_{1}\sigma_{2} \in \Sigma$.  Terminal node has no value.  Except for the initial state $s_0$, elements of $F$ not indexed.\\
+\\
+$M: S \times S \times \Sigma \to S$ (note: $M$ earlier defined as transition table).  Inputs for $\mathfrak{U}$ finite binary trees, nodes val. by $\Sigma$.
 
+\subsubsection{Binary trees}
+Paper defines trees "as sets of words on alphabet $\Omega = \{ 0,1 \}$."  Let $x,y \in \Omega^{*}, x$ is "...the prefix of $y$ if some $z \in \Omega^{*}, y = xz$."  
+"...Subset $H \subseteq \Omega^{*}$ is \textit{prefix closed} if $y \in H$ and $x$ prefix of $y$ imply $x \in H$.   
+"The \textit{prefix closure} of" $G \subseteq \Omega^{*}$ "is the smallest prefix closed set $H$..." s.t. $G \subseteq H$.  All "prefix closed set[s]" have the empty word as a member.\\
 
+"A (binary) tree is a prefix-closed subset $H \subseteq \Omega^{*}$."  ."..Elements $x \in H$" are nodes.  "The node $\Lambda \in H$ is the" tree's root.  (why use the empty word symbol?)\\
+If $x \in H$ and $x_0 \notin H$ and $x_1 \notin H$, $x$ is a terminal node.\\
+$H$ is \textit{frontiered} if $\forall \ x \in H$ ($x$ is non-terminal) we have $x_0 \in H$ and $x_1 \in H$. $Ft(H)$ is "the set of all terminal nodes of $H$."
+
+\subsubsection{Tree-automata}
+"A $\Sigma$-valued tree is a pair $(v, H)$, where $H$ is a finite frontiered tree; $v: (H-Fr(H)) \to \Sigma$. Each non-terminal node $x \in H$ is assigned a symbol $v(x) \in \Sigma$.\\
+"The set of all valued trees" is denoted by $V(\Sigma, \Omega)$.\\
+\\
+DEFINITION 9: "A \textit{finite tree automaton} (f.t.a) is a system $\mathfrak{U} = < S,M_t, s_0, F >$." Symbols $S, s_0, F$ in DEFINITION 1.  $M_t : S \times S \times \Sigma \to S$\\
+DEFINITION 10: "The f.t.a. $\mathfrak{U}_t$ is said to accept $(v, H) \in V(\Sigma, \Omega)$, if $\exists \ \phi : H \to S$ satisfying:"\\
+1. "$\phi(x) = s_0$ for $x \in Fr(H)$"\\
+2. "if $x \in Fr(H)$ (hence, $x_0, x_1 \in H$) then $\phi(x) = M_t (\phi(x_0) \phi(x_1), v(x))$"\\
+3. "$\phi(\Lambda) \in F$"\\
+Set of all inputs accepted denoted $T(\mathfrak{U)}$.  $T$ is the set defined by $\mathfrak{U}_t$.  $T \subseteq V(\Sigma, \Omega)$ is f.t.a. definable if for some $\mathfrak{U}_t, T = T(\mathfrak{U}_t)$.\\
+Note: The function $\phi$ is unique.\\
+non-deterministic f.t.a. -- $\phi : H \to S$ compatible with $(v,H)$, $T(\mathfrak{U}_t)$ defined by a non-deterministic f.t.a.\\
+Results that follow from f.a. to finite tree automata:\\
+"...Class of all f.t.a. definable subsets $T \subseteq V(\Sigma, \Omega)$ is a boolean algebra." 
+"For every non-deterministic f.t.a" $T(\mathfrak{U}_t) \exists$ a deterministic f.t.a. $\mathfrak{B}_t$ s.t. $T(\mathfrak{U}_t) = T(\mathfrak{B}_t)$.\\
+"The emptiness and equivalence problems for f.t.a are solvable." (? what is the emptiness problem; does the equivalence problem have to do with the eq. relation material earlier?)
+
+\newpage
+
+\subsubsection{Valued trees and terms}
+There is "a one-to-one correspondence between terms and valued trees..."\\
+$T_0 = (v_0, H_0)$ and $T_1 = (v_1, H_1)$ are $\Sigma$-valued trees and $\sigma \in \Sigma$.  $H_0$ and $H_1$ are trees, which can be combined: $H = \{ \Lambda \} \cup 0H_0 \cup 1H_1$.\\
+\textit{combined valued tree} is denoted $C(\sigma, T_0, T_1)$ is defined to be $(v_0, H)$ where $v(\Lambda) = \sigma, v(0x) = v_0(x)$ for $x \in H_0, v(1x) = v_1(x)$ for $x \in H_1$.\\
+"Associate with each $\sigma \in \Sigma$" a binary function (operation) symbol $F_\sigma$ and let $u_0$ be a fixed symbol.  $V_2$, set of all terms, is "...the
+ smallest set" s.t. "$u_0 \in V_2$ if $t_0 \in V_2$ and $t_1 \in V_2$ then $F_\sigma(t_0, t_1) \in V$ for $\sigma \in \Sigma$."\\
+ $\phi(\Lambda) =  u_0, \phi(C(\sigma, T_0, T_1)) = F_\sigma(\phi(T_0), \phi(T_1)), \sigma \in \Sigma, T_0, T_1 \in V(\Sigma, \Omega)$.\\
+"A set $K \subseteq V_2$ of terms is...\textit{f.t.a definable} if for some definable $T \subseteq V(\Sigma, \Omega)$ we have $K = \phi(T)$.\\
+If terms $t \in V_2$ are words on the alphabet $\{ F_{\sigma} | \sigma \in \Sigma \}$, definable sets that are not always regular events per DEFINITION 2.\\
+"$t$ is often stored in memory in tree (list) form and the evaluation of" $\phi(x)$ for each node done successively, "starting from the terminals for which $\phi(x) = s_0$, ending with $\phi(\Lambda)$."
