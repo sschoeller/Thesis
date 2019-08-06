@@ -30,14 +30,24 @@ $A = (S, I, \delta, F)$ is a finite automata.  S and I are finite, $\delta$ is a
 3. Set $k = 3$\\
 4. For ea. $a \in I$ construct\\
 \\  $L(a) = {1}$ if  $| \hat{B}(B(1), a) | \le | \hat{B}(B(2), a) |$\\
- $L(a) = {2}$ otherwise.\\
+ $L(a) = {2}$ otherwise.
+ 
+ \newpage
+ 
 5. Select $a \in I$ and $i \in L(a)$.  The algorithm terminates when $L(a) = \emptyset$.\\
 6. Delete $i$ from $L(a)$.\\
 7. For each $j < k$ s.t. there exists $t \in B(j)$ with $\delta(t,a) \in \hat{B}(B(i),a)$, perform steps 7a, 7b, 7c and 7d.\\
 \\
 7a. Partition B(j) into $B^{'} = \{t | \delta(t,a) \in \hat{B}(B(i), a)$ and $B^{"} = B^{"} = B(j) - B^{'}(j) \}$\\ 
-7b. Replace $B(j) by B^{'}(j)$. Construct the corresponding $\bar{B}(B(j), a)$. and $\hat{B}(B(k), a)$ for ea. $a \in I$.\\ 
+7b. Replace $B(j)$ by $B^{'}(j)$. Construct the corresponding $\bar{B}(B(j), a)$. and $\hat{B}(B(k), a)$ for ea. $a \in I$.\\ 
 7c.For ea. $a \in I$\\
 \\
-$L(a) = L(a) \cup {j}$ if $j$ not in $L(a)$ and $0 < ...$ 
+$L(a) = L(a) \cup {j}$ if $j$ not in $L(a)$ and $0 < | \hat{B}(B(j), a) | \le | \hat{B}(B(k), a) |$\\
+$L(a) = L(a) \cup {k}$ otherwise\\
+7d. $k+=1$\\
+8. goto 5\\
+\\
+Running time analysis:\\
+sets represented by linked lists,
+$\hat{B}(B(i), a)$ represented by a double linked list
 \end{document}

@@ -9,7 +9,7 @@
 \usepackage{geometry} % see geometry.pdf on how to lay out the page. There's lots.
 %\geometry{a4paper} % or letter or a5paper or ... etc
 % \geometry{landscape} % rotated page geometry
-\usepackage{amssymb}
+\usepackage{amsmath, amssymb}
 \usepackage{stmaryrd} % contains Yleft, Yright
 % See the ``Article customise'' template for come common customisations
 
@@ -21,13 +21,18 @@
 \S{1.1: Strings \& Automata}\\
 str x is a \textbf{factor} of a str y if $\exists$ two str \textit{u,v} s.t. $y= uxv$\\
 $\underline{\Yleft}_{fact}$: factor\\
-\ \\
-
+\\
 When $u = \epsilon, x$ is a \textbf{prefix} of \textit{y} if $\exists |x| + 1$ str $w_{0}, w_{1}, ..., w_{|x|}$ s.t\\ 
 $y=w_{0}x[0] w_{1}x[1]...x[|x|-1]w_{|x|}$\\
 $\underline{\Yleft}_{pref}$: prefix\\
 $\Yleft_{pref}$: proper prefix\\
-
-
+\textbf{lexicographic ordering}, $\le$, defined as follows:\\ 
+$x,y \in A^{*}$, iff either $x \underline{\Yleft}_{pref} y$,\\
+or $x$ and $y$ decomposable into $x = uav, y = ubw$, where $u, v, w \in A^{*}$ and $a,b \in A$; $a < b$\\
+ex(?): $ababb < abba < abbab$ (``assuming $a < b$'').\\ 
+``...$x$ occurs in $y$ when $x$ is a factor of $y$."\\
+$pos(x) = min\{  |u| : uxA^{*} \cap yA^{*} \ne \emptyset \}$ is the position of first occurrence.\\
+Fact(X), Pref(X), Suff(X) and Subs(X) for a language X.\\
+Right context (DEF): $y$ is a str; $y^{-1}X = \{ y^{-1}x : x \in X \}$ (is $y^{-1}$ a shift operator ?)\\
 
 \end{document}

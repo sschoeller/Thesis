@@ -59,6 +59,17 @@ Class of extended rational languages over $A$ is X-Rat$A^{*}$
 \newpage %
 
 \textbf{\S{1.2.2}}\\
+(Finite State) Automata DEF: $A = (Q, T, I,F)$\\
+
+Complete Automata: Finite state automata complete if $\forall \ q \in Q, a \in A, \exists$ at least one transition $(q, q q^{'})$ (NOTE: edge exists starting from each state)\\
+$\epsilon$-automata: allow transitions on the empty word. Every $\epsilon$-automaton equivalent to an ordinary automaton.
+
+\textbf{\S{1.2.3}}\\
+``Let A be a deterministic automaton and let $w$ be a word."\\
+``(1)For each state $q$ of A, $\exists$ at most one path labeled $w$ starting at $q$."\\
+(2)If $w = L(A)$, then $w$ labels exactly one successful path.\\
+transition function $\delta$ maps $Q \times A \to Q$; $\delta$ maps $(q, a) \in Q \times A$ to the state $q^{'}$ s.t. $(q,a,q^{'}) \in T$
+\section{Chapter 3}
 
 \section{Chapter 9}
 
