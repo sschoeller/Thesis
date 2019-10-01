@@ -1,0 +1,27 @@
+# Research meeting notes 2019-10-01
+## Scott Schoeller & Zach Oster
+-----
+
+Problem: Given a DNA sequence, 
+	(1)	identify end codons for DNA sequences
+	(2)	identify start codons for DNA sequences
+as efficiently as possible. Would like to do it in less than O(n^2) time; not sure if this is possible.
+
+May be more efficient to identify the end codon first, because it signifies the end of the pattern.
+
+We can take advantage of existing patterns, e.g., 2 of the 3 possible end codons end with the same letter. 
+
+Using two finite automata, possibly moving in opposite directions. Simple divide-and-conquer probably won't work well.
+
+An approximate algorithm may be OK if accuracy is above a certain minimum threshold.
+
+Some questions:
+	-	What accuracy rate is "good enough"?
+	-	How accurate is the naive algorithm?
+	-	How might you partition a DNA sequence to allow multiple pieces of the sequence to be analyzed in parallel?
+	-	How can you spread the work across 2 or 3 computing nodes? Can you use the fact that a codon has a length of 3 bases?
+	
+Oster's idea: Have 3 separate threads work on the same copy of DNA data. 
+	-	Thread 1 looks for start/stop codons beginning at base 1, 4, 7, ....
+	-	Thread 2 looks for start/stop codons beginning at base 2, 5, 8, ....
+	-	Thread 3 looks for start/stop codons beginning at base 3, 6, 9, ....
