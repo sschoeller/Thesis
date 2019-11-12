@@ -1,0 +1,22 @@
+\documentclass[12pt]{article}
+\usepackage{geometry}
+\geometry{paper=letterpaper}
+
+\usepackage{times}
+
+\begin{document}
+
+\section*{Abstract}
+\indent
+\par{The brute force algorithm for string matching has a worst-case execution complexity of $O(MN)$, where $N$ is the length of the superstring and $M$ is the length of the substring to be matched \cite{cormen_string_2009, pandiselvam_comparative_2014, skiena_algorithm_2010}.
+The accuracy of this algorithm for DNA analysis is estimated to be $66.7\%$ \cite{pandiselvam_comparative_2014}. The most accurate method known for DNA analysis, using Hamming distances \cite{hamming_error_1950}, can be completed with $81\%$ accuracy, but suffers from $O(N^2)$ runtime \cite{pandiselvam_comparative_2014}. In contrast, the automata-based Aho-Corasick Algorithm \cite{aho_efficient_1975} is only $61.8\%$ accurate \cite{pandiselvam_comparative_2014}.
+} 
+\par{Since cloud-based distributed systems are becoming increasingly ubiquitous, the goal of this research is to create a new distributed algorithm for DNA sequencing that has better big-O and accuracy metrics than the brute force method, with application to the situation where the algorithm attempts to locate potential start and stop codons.
+}
+
+\newpage
+% NOTE: rename "main.bib" (from GitHub) to "Abstract.bib"
+\bibliography{Abstract}
+\bibliographystyle{acm}
+
+\end{document}
