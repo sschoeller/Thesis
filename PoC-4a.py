@@ -46,7 +46,7 @@ def AT_Scan(STOPfound):
                 print(j)
     return AT_list
 
-# Use divide and conquer to look for G
+# Divide the array; look for G
 def GScan(AT_list):
     firsthalf = (len(AT_list)-1)//2
     secondhalf = len(AT_list) - firsthalf
