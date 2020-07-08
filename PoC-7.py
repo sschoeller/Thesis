@@ -49,12 +49,12 @@ def searchEndCodon(Codon):
     firstLetter = Codon[0]
     lastTwo = Codon[1:3]
     if firstLetter == 'T':
-        # Use bit-processing on last two letters
+        # Use bit-processing on last two letters?
         # below if is for testing purposes
-        if 'A' in lastTwo and 'T' not in lastTwo and 'C' not in lastTwo:
+        if 'A' in lastTwo and ('T' not in lastTwo and 'C' not in lastTwo):
             return Codon
         else:
-            return "0"
+            return '-1'
 
 def searchStartCodon(Codon):
     firstLetter = Codon[0]
@@ -63,15 +63,15 @@ def searchStartCodon(Codon):
         if firstLetter == "A":
             return Codon
     else:
-        return '0'
+        return '-1'
 
 def searchCodons(DNAseq):
     # Goal: preprocess patterns for STOP codons in parallel
-    with mp.Pool() as p1:
-        endPreprocess(0, tAG)
-        endPreprocess(1, tGA)
-        endPreprocess(2, tAA)
-    p1.close()
+    # with mp.Pool() as p1:
+    #endPreprocess(0, tAG)
+    #endPreprocess(1, tGA)
+     #endPreprocess(2, tAA)
+    #p1.close()
     # Goal: run searchEndCodon() using parallel map()
     DNACodons = [ ]
     for i in range(0, len(DNAseq)):
@@ -79,27 +79,52 @@ def searchCodons(DNAseq):
             if len(DNAseq[i:i+3]) == 3: # filter out "incomplete codons"
                 DNACodons.append(DNAseq[i:i+3])
             else:
-                DNACodons.append('0')
+                DNACodons.append('-1')
     results = [ ]
+
     with mp.Pool() as p2:
-        results = p2.map(searchEndCodon, DNACodons)
-        results = list(results)
+        results0 = p2.map(searchEndCodon, DNACodons)
+        results0 = list(results0)
     p2.close()
     
+    print(results0)
+
+    with mp.Pool() as p3:
+        results1 = p3.map(searchStartCodon, DNACodons)
+        results1 = list(results1)
+    p3.close()
+
+    print(results1)
+
+    # combine the two lists of equal length, removing None values
+    Metnum = 0 # counter for Met Codons
+    STOPnum = 0 # counter for stop Codons
+    for i in range(0, len(results0)):
+        if results0[i] == None and results1[i] == None:
+            results.append(['-1', '-1', '-1']) # a placeholder other than None
+            continue
+        if results0[i] == None and results1[i] == "ATG":
+            results.append(["ATG", str(i), "Met"]) # ATG also codes for Met
+            Metnum += 1
+            continue
+        elif results0[i] == "TAA" or results0[i] == "TGA" or results0[i] == "TAG":
+            results.append([results0[i], str(i), "STOP"]) # STOP appended consistant with format
+            STOPnum += 1
+        
     print(results)
+    print(Metnum)
+    print(STOPnum)
 
-  
-    #with mp.Pool() as p2:
-        #p2.map(searchEndCodon, )
-    #p2.close()
 
-with open("AndrogenXChromosome.flat.out", "r") as DNAfile:
+#with open("AndrogenXChromosome.flat.out", "r") as DNAfile:
+with open("H.pylori.dna", "r") as DNAfile:
     In = DNAfile.read()
 
 start = time.time()
 print(tAG)
 print(tGA)
 print(tAA)
+#searchCodons("ATGGGAAATGA")
 searchCodons(In)
 finish = time.time() - start
 print(finish)
