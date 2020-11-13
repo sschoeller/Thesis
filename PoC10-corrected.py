@@ -6,12 +6,10 @@ import time
 binList = [ ]
 startList = [ ]
 stopList = [ ]
-#S = "ATGTGATGC"
+S = "ATGTGATAAGC"
 
-#with open("H.pylori.dna", "r") as DNAfile:
-    #S = DNAfile.read()
-
-S="ATGTAATAGATATGTATAG"
+#with open("rice_genomic.fna.out", "r") as DNAfile:
+#    S = DNAfile.read()
 
 start = time.time()
 
@@ -22,12 +20,12 @@ for char in S: # pre-filtering step for the letters ATG in no particular order
         binCtr = binCtr | 1
         binList.append(binCtr) 
     elif char == 'T':
-        binCtr = binCtr | 16 # 2^4
+        binCtr = binCtr | 4 # 2^2
         binList.append(binCtr)
     elif char == 'G':
         binCtr = binCtr | 8 # 2^3
         binList.append(binCtr)
-        if binCtr == 25: # Check if ATG found
+        if binCtr == 13: # Check if ATG found
             binCtr = 0x0 # reset
     elif char == 'C':
         binCtr = 0x0 # reset, 'C' not in pattern
@@ -36,29 +34,16 @@ for char in S: # pre-filtering step for the letters ATG in no particular order
         continue  # optimization
 
 for j in range(0, len(binList)):
-    if binList[j] == 25:
-        continue # skip checks for TGA
-    elif binList[j] % 16 == 0:
-        if S[j] == 'T':
-            binList[j] = binList[j] & 16 # reset all other bits
-    elif binList[j] % 8 == 0:
-        if S[j] == 'G':
-           binList[j] = binList[j] | 8 # retain the 'T' bit and other bits
+    Codon = S[j-2:j+1]
+    if binList[j] == 13: # Check for all codons due to false negative results on "TAA"
+        if Codon == "TAA" or Codon == "TGA" or Codon == "TAG":
+            stopList.append(j)
+        elif Codon == "ATG":
+            startList.append(j)
+    elif binList[j] == 5 and S[j:j+2] == "TAA":
+            stopList.append(j)
     else:
-        continue
-
-for k in range(0, len(S)):
-    if binList[k] == 25: 
-        if S[k-2:k+1] == "ATG":
-            startList.append(k)
-        elif S[k-2:k+1] == "TGA":
-            stopList.append(k)
-        elif S[k-2:k+1] == "TAG":
-            stopList.append(k)
-    elif binList[k] == 24:
-            stopList.append(k)
-    else:
-        continue
+        continue # optimization
 
 print('\n')            
 print(binList)
