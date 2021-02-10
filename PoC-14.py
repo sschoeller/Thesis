@@ -25,9 +25,9 @@ class searchDNA:
         self.TAG = hash("TAG")
 
     def binCompress(self): # traslates to compressed version; adds to list
-        self.binCtr = self.binCtr << 2
+        self.binCtr = self.binCtr << 4
         self.binPos += 1
-        if self.binPos == 15: # end of 32 bits
+        if self.binPos == 8: # end of 32 bits
             self.binList.append(self.binCtr)
             self.binCtr = 0x00000000
             self.binPos = 1 # reset
@@ -60,34 +60,44 @@ class searchDNA:
             #else:
                 #self.binCompress()
         
-        binShift = 32 # counts every four bits
-        mask = 0xF # covers four bits at a time
-        pos = 0 # starting position in binList
-        for j in range(len(self.S)-1,0, -1):
-            pos = j//8 + j % 8 # ending position in binList
-            Codon = hash(self.S[j+2:j+1])
-            if binShift < 8:
+        binShift = 0 # counts every four bits
+        mask = 0x0000000F # covers four bits at a time
+        pos = 0 # starting position in S
+        bitPos = 0 # bit subscript
+        for j in range(0, len(self.binList)):
+            if pos < 8:
+                pos = j
+            else:
+                pos = j + (j-8) 
+            
+            Codon = hash(self.S[pos-2:pos+1])
+            if binShift < 32:
                 mask << 4
+                bitPos += 1
             else:
                 # reset
-                binShift = 0
-                mask = 0xF0
-            if self.binList[pos] & mask != 0: # Check for all codons due to false negative results on "TAA"
+                binShift = 32
+                bitPos = 0
+            if self.binList[j] << 4 & mask == 7: # Check for all codons due to false negative results on "TAA"
                 if Codon == self.TAA or Codon == self.TGA or Codon == self.TAG:
                     self.stopList.append(j)
-                    binShift += 1
+                    binShift += 4
                 elif Codon == self.ATG:
                     self.startList.append(j)
-                    binShift += 1
-            elif self.binList[pos] & mask != 0:
-                if Codon == self.TAA:
+                    binShift += 4
+                elif Codon == self.TAA:
                     self.stopList.append(j)
-                    binShift += 1
+                    binShift += 4
+                else:
+                    binShift += 4
+            elif self.binList[j] << 4 & mask << bitPos == 3 and Codon == self.TAA:
+                self.stopList.append(j)
+                binShift += 4
             else:
-                binShift += 1
+                binShift += 4
                 continue # optimization
 
-        return self.binList
+        return [self.startList, self.stopList]
 
 with open(f, "r") as DNAfile:
     S = DNAfile.read()
