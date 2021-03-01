@@ -75,7 +75,7 @@ class searchDNA:
         for j in range(0, len(S)-3): # len(S) - 4 end 
             pos = j//28 # convert j into the respective position in binList
             Codon = hash(self.S[j:j+3])
-            if binShift < 30:
+            if binShift < 28:
                 bitPos += 1
             else:
                 # reset
