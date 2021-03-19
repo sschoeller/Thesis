@@ -21,7 +21,6 @@ class searchDNA:
         self.binList = [ ]
         self.startList = [ ]
         self.stopList = [ ]
-        # Constants
         # testing purposes only!
         self.t = 0 # start time after constructor called
 
@@ -63,12 +62,10 @@ class searchDNA:
                 self.binCtr = self.binCtr | 4 # 2^2
                 self.binCompress()
             elif char == 'C':
-                self.binFlag == True
                 self.binCompress()
             elif char == 'a' or char == 't' or char == 'c' or char == 'g': # inactive regions
-                self.binFlag == True
                 self.binCompress()
-            if self.binPos % 4 == 0 or i == len(self.S)-1:
+            if self.binPos == 28 or i == len(self.S)-1:
                 self.binFlag = True
                 self.binCompress()
             #else:

@@ -20,11 +20,6 @@ class searchDNA:
         self.binList = [ ]
         self.startList = [ ]
         self.stopList = [ ]
-        # Constants
-        self.ATG = hash("ATG")
-        self.TAA = hash("TAA")
-        self.TGA = hash("TGA")
-        self.TAG = hash("TAG")
         # testing purposes only!
         self.t = 0 # start time after constructor called
 
@@ -81,7 +76,7 @@ class searchDNA:
         bitPos = 0 # bit subscript
         for j in range(0, len(S)-3): # len(S) - 4 end 
             pos = j//28 # convert j into the respective position in binList
-            Codon = hash(self.S[j:j+3])
+            Codon = self.S[j:j+3]
             if binShift < 28:
                 bitPos += 1
             else:
@@ -89,18 +84,18 @@ class searchDNA:
                 binShift = 0
                 bitPos = 0
             if self.binList[pos] >> (j*4) & 0x00000007 % 7 == 0: # Check for all codons due to false negative results on "TAA"
-                if Codon == self.TAA or Codon == self.TGA or Codon == self.TAG:
+                if Codon == "TAA" or Codon == "TGA" or Codon == "TAG":
                     self.stopList.append(j)
                     binShift += 1
-                elif Codon == self.ATG:
+                elif Codon == "ATG":
                     self.startList.append(j)
                     binShift += 1
-                elif Codon == self.TAA:
+                elif Codon == "TAA":
                     self.stopList.append(j)
                     binShift += 1
                 else:
                     binShift += 1
-            elif self.binList[pos] >> (j*4) & 0x00000003 % 3 == 0 and Codon == self.TAA:
+            elif self.binList[pos] >> (j*4) & 0x00000003 % 3 == 0 and Codon == "TAA":
                 self.stopList.append(j)
                 binShift += 1
             else:
